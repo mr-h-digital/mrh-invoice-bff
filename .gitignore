@@ -1,0 +1,117 @@
+# ──────────────────────────────────────────────
+# Claude Code
+# ──────────────────────────────────────────────
+.claude/
+.claude-flow/
+*.claude
+.aider*
+
+# ──────────────────────────────────────────────
+# Maven
+# ──────────────────────────────────────────────
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ──────────────────────────────────────────────
+# Spring Boot
+# ──────────────────────────────────────────────
+*.jar
+*.war
+*.ear
+spring-shell.log
+
+# ──────────────────────────────────────────────
+# Java
+# ──────────────────────────────────────────────
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# ──────────────────────────────────────────────
+# IntelliJ IDEA
+# ──────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ──────────────────────────────────────────────
+# VS Code
+# ──────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ──────────────────────────────────────────────
+# Eclipse
+# ──────────────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# ──────────────────────────────────────────────
+# NetBeans
+# ──────────────────────────────────────────────
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ──────────────────────────────────────────────
+# OS
+# ──────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ──────────────────────────────────────────────
+# Environment / secrets
+# ──────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+application-secrets.yml
+application-secrets.properties
+
+# ──────────────────────────────────────────────
+# Docker
+# ──────────────────────────────────────────────
+docker-compose.override.yml
+
+# ──────────────────────────────────────────────
+# Test / coverage
+# ──────────────────────────────────────────────
+/coverage/
+*.exec
+jacoco.xml
+
+# ──────────────────────────────────────────────
+# Logs
+# ──────────────────────────────────────────────
+logs/
+*.log
+*.log.*

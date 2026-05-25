@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mrhdigital_invoices
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    co.za.mrhdigital: DEBUG
+    org.hibernate.SQL: DEBUG

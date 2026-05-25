@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: false
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+
+logging:
+  level:
+    root: WARN
+    co.za.mrhdigital: INFO
