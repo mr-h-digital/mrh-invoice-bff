@@ -1,5 +1,8 @@
+[phases.setup]
+nixPkgs = ["jdk21_headless", "maven"]
+
 [phases.build]
-cmds = ["mvn package -DskipTests"]
+cmds = ["mvn package -Dmaven.test.skip=true -Dmaven.repo.local=/app/.m2/repository"]
 
 [start]
-cmd = "java -jar target/mrh-invoice-service-1.0.0.jar"
+cmd = "java -Xmx512m -jar target/mrh-invoice-service-1.0.0.jar"
