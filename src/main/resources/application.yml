@@ -6,6 +6,10 @@ spring:
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
+    hikari:
+      data-source-properties:
+        sslmode: ${DB_SSL_MODE:disable}
+        sslfactory: org.postgresql.ssl.NonValidatingFactory
   jpa:
     hibernate:
       ddl-auto: validate

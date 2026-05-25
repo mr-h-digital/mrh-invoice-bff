@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["mvn package -DskipTests"]
+
+[start]
+cmd = "java -jar target/mrh-invoice-service-1.0.0.jar"
