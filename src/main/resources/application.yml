@@ -2,13 +2,13 @@ spring:
   application:
     name: mrh-invoice-service
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/mrhdigital_invoices}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
+    url: ${DATABASE_URL:jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:mrhdigital_invoices}}
+    username: ${PGUSER:postgres}
+    password: ${PGPASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
     hikari:
       data-source-properties:
-        sslmode: ${DB_SSL_MODE:disable}
+        sslmode: ${DB_SSL_MODE:require}
         sslfactory: org.postgresql.ssl.NonValidatingFactory
   jpa:
     hibernate:
