@@ -1,6 +1,7 @@
 package co.za.mrhdigital.invoiceservice.domain.invoice.dto;
 
 import co.za.mrhdigital.invoiceservice.domain.invoice.DiscountType;
+import co.za.mrhdigital.invoiceservice.domain.invoice.InvoiceStatus;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -22,6 +23,9 @@ import java.util.List;
 public class InvoiceRequest {
 
     private String invoiceNumber;
+
+    // Optional on create (defaults to DRAFT); respected on PUT update
+    private InvoiceStatus status;
 
     private String clientId;
 

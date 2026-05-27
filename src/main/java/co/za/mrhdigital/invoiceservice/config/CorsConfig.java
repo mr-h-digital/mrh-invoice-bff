@@ -23,18 +23,16 @@ public class CorsConfig {
                         .allowedHeaders("*")
                         .maxAge(3600);
 
+                // GitHub Pages deployment always allowed
+                java.util.List<String> origins = new java.util.ArrayList<>(java.util.List.of(
+                        "http://localhost:5173",
+                        "http://localhost:3000",
+                        "https://mr-h-digital.github.io"
+                ));
                 if (StringUtils.hasText(frontendUrl)) {
-                    registration.allowedOrigins(
-                            "http://localhost:5173",
-                            "http://localhost:3000",
-                            frontendUrl
-                    );
-                } else {
-                    registration.allowedOrigins(
-                            "http://localhost:5173",
-                            "http://localhost:3000"
-                    );
+                    origins.add(frontendUrl);
                 }
+                registration.allowedOrigins(origins.toArray(new String[0]));
             }
         };
     }

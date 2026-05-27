@@ -3,6 +3,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/mrhdigital_invoices
     username: postgres
     password: postgres
+    hikari:
+      data-source-properties:
+        sslmode: disable          # local Docker has no SSL
   jpa:
     show-sql: true
 

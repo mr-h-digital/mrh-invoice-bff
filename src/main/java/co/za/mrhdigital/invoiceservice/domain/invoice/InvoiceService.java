@@ -48,6 +48,7 @@ public class InvoiceService {
 
         Invoice invoice = Invoice.builder()
                 .invoiceNumber(invoiceNumber)
+                .status(request.getStatus() != null ? request.getStatus() : InvoiceStatus.DRAFT)
                 .issueDate(request.getIssueDate())
                 .dueDate(request.getDueDate())
                 .discountType(request.getDiscountType())
@@ -69,6 +70,9 @@ public class InvoiceService {
     public InvoiceResponse update(String id, InvoiceRequest request) {
         Invoice invoice = getOrThrow(id);
 
+        if (request.getStatus() != null) {
+            invoice.setStatus(request.getStatus());
+        }
         invoice.setIssueDate(request.getIssueDate());
         invoice.setDueDate(request.getDueDate());
         invoice.setDiscountType(request.getDiscountType());
